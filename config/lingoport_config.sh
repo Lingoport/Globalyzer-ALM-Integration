@@ -8,4 +8,4 @@ export GLOBALYZER_SERVER_PASSWORD=
 export DASHBOARD_INSTALL_PATH=  # Example /var/lib/jenkins/lingoport
 export LITE_DEFINITION_FILE_PATH= # Example /var/lib/jenkins/lingoport/LiteProjectDefinitionFile.xml
 export PROJECT_NAME=
-export PROJECT_PATH=
+export PROJECT_SOURCE_PATH=
