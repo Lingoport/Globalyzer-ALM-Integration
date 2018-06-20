@@ -1,0 +1,11 @@
+# REQUIRED CONFIG VARIABLES
+export GLOBALYZER_DASHBOARD_URL=
+export GLOBALYZER_DASHBOARD_USERNAME=
+export GLOBALYZER_DASHBOARD_PASSWORD=
+export GLOBALYZER_SERVER=
+export GLOBALYZER_USERNAME=
+export GLOBALYZER_SERVER_PASSWORD=
+export DASHBOARD_INSTALL_PATH=  # Example /var/lib/jenkins/lingoport
+export LITE_DEFINITION_FILE_PATH= # Example /var/lib/jenkins/lingoport/LiteProjectDefinitionFile.xml
+export PROJECT_NAME=
+export PROJECT_PATH=
