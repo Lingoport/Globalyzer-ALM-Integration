@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AutomatedInstallation langpack="eng">
+<com.izforge.izpack.panels.hello.HelloPanel id="HelloPanel_0"/>
+<com.izforge.izpack.panels.htmlinfo.HTMLInfoPanel id="release_notes"/>
+<com.izforge.izpack.panels.htmllicence.HTMLLicencePanel id="HTMLLicencePanel_2"/>
+<com.izforge.izpack.panels.target.TargetPanel id="tp1">
+<installpath></installpath>
+</com.izforge.izpack.panels.target.TargetPanel>
+<com.izforge.izpack.panels.userinput.UserInputPanel id="sonar.settings">
+<entry key="dashboardURL" value=""/>
+</com.izforge.izpack.panels.userinput.UserInputPanel>
+<com.izforge.izpack.panels.userinput.UserInputPanel id="globalyzer.selection">
+<entry key="globalyzer.sets" value="false"/>
+</com.izforge.izpack.panels.userinput.UserInputPanel>
+<com.izforge.izpack.panels.packs.PacksPanel id="PacksPanel_7">
+<pack index="0" name="Base" selected="true"/>
+<pack index="1" name="bin-os-unix" selected="true"/>
+<pack index="2" name="bin-os-mac" selected="true"/>
+<pack index="3" name="sonar-scanner" selected="true"/>
+</com.izforge.izpack.panels.packs.PacksPanel>
+<com.izforge.izpack.panels.install.InstallPanel id="InstallPanel_8"/>
+<com.izforge.izpack.panels.info.InfoPanel id="info"/>
+<com.izforge.izpack.panels.finish.FinishPanel id="FinishPanel_10"/>
+</AutomatedInstallation>

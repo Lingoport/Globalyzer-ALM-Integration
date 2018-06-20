@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+  <!-- All items should be allowed anywhere in the xml as long as the hierarchy is preserved -->
+  <gzproject>
+    <login>
+       <username></username>
+       <password></password>
+       <server></server>
+       <use-local-rulesets></use-local-rulesets>  <!-- optional. May be 'true' or 'false'     -->
+                                                  <!-- if true, you need a Globalyzer.license -->
+       <!-- Optional Parameters -->
+       <optional>
+           <proxy-user></proxy-user>
+           <proxy-password></proxy-password>
+           <proxy-host></proxy-host>
+           <proxy-port></proxy-port>
+       </optional>
+    </login>
+    <project-path></project-path> <!-- May instead be specified from command line -->
+    <project-name></project-name>
+    <report-path></report-path>   <!-- May instead be specified from command line -->
+    <report-type></report-type>
+    <scans>
+       <scan>
+          <!-- create and execute a single scan with this info -->
+          <scan-name></scan-name>
+          <ruleset-name></ruleset-name>
+          <ruleset-owner></ruleset-owner>
+       </scan>
+       <scan>
+       <!-- create and execute a single scan with this info -->
+          <scan-name></scan-name>
+          <ruleset-name></ruleset-name>
+          <ruleset-owner></ruleset-owner>
+          <!-- optional: specify files/directories to scan -->
+          <scan-items>
+             <item></item>
+             <item></item>
+          </scan-items>
+       </scan>
+    </scans>
+ </gzproject>
