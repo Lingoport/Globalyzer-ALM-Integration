@@ -9,8 +9,7 @@ Globalyzer-ALM-Integration is deployed Globalyzer as part of your ALM environmen
 ## Configuration
 Configuration for Integration is intended to be as simple as possible. All that is needed for Globalyzer to be ready for use are a few environment variables, all of which should be set in the config file:
 
-contents of ./config/lingoport_config.sh:
-
+   contents of ./config/lingoport_config.sh:
    # REQUIRED CONFIG VARIABLES
    export GLOBALYZER_DASHBOARD_URL=
    export GLOBALYZER_DASHBOARD_USERNAME=
