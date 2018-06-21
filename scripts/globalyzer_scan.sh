@@ -2,7 +2,7 @@
 #
 # This script does the following:
 #     - Verify lingoport configuration file contents
-#     - Config Dashboard client auto_install.xml file
+#     - Config Dashboard client auto-install.xml file
 #     - Install Dashboard client to specific  directory
 #     - Install Globalyzer Lite
 #     - Scan project wite specific Lite Definition File
@@ -22,6 +22,8 @@ echo "=================================================="
 echo ""
 
 export GLOBALYZER_HOME=`cd $( dirname "${BASH_SOURCE[0]}" )/../ && pwd`
+source ${GLOBALYZER_HOME}/config/lingoport_config.sh
+
 echo "Current Globalyzer Configuration Values:"
 echo " GLOBALYZER_DASHBOARD_URL        =  $GLOBALYZER_DASHBOARD_URL"
 echo " GLOBALYZER_DASHBOARD_USERNAME   =  $GLOBALYZER_DASHBOARD_USERNAME"
@@ -85,3 +87,63 @@ else
   echo " Lite definition file could not be located. "
   exit 1
 fi
+
+# Locate Globalzer.license
+LICENSE_PATH="${GLOBALYZER_HOME}/lingoport/Globalzer.license"
+
+if [ -f $JENKINS_CLI_PATH ] ; then
+  echo " Globalzer.license exists"
+else
+  echo " Globalzer.license could not be located. Download Globalzer.license file from Globalyzer server, and copy the license file to lingoport directory."
+  exit 1
+fi
+
+sed -i "s|<installpath></installpath>|<installpath>$DASHBOARD_INSTALL_PATH</installpath>|" ${GLOBALYZER_HOME}/lingoport/auto-install.xml
+sed -i "s|YOUR_URL|$GLOBALYZER_DASHBOARD_URL|" ${GLOBALYZER_HOME}/lingoport/auto-install.xml
+sed -i "s|<username></username>|<username>$GLOBALYZER_USERNAME</username>|" $LITE_DEFINITION_FILE_PATH
+sed -i "s|<password></password>|<password>$GLOBALYZER_SERVER_PASSWORD</password>|" $LITE_DEFINITION_FILE_PATH
+sed -i "s|<server></server>|<server>$GLOBALYZER_SERVER</server>|" $LITE_DEFINITION_FILE_PATH
+sed -i "s|<project-path></project-path>|<project-path>$PROJECT_SOURCE_PATH</project-path>|" $LITE_DEFINITION_FILE_PATH
+sed -i "s|<project-name></project-name>|<project-name>$PROJECT_NAME</project-name>|" $LITE_DEFINITION_FILE_PATH
+sed -i "s|<report-path></report-path>|<report-path>${PROJECT_SOURCE_PATH}/GlobalyzerScans</report-path>|" $LITE_DEFINITION_FILE_PATH
+sed -i "s|^sonar.login=.*$|sonar.login=$GLOBALYZER_DASHBOARD_USERNAME|" ${GLOBALYZER_HOME}/config/sonar-project.properties
+sed -i "s|^sonar.password=.*$|sonar.password=$GLOBALYZER_DASHBOARD_PASSWORD|" ${GLOBALYZER_HOME}/config/sonar-project.properties
+sed -i "s|^sonar.projectKey=.*$|sonar.projectKey=${PROJECT_NAME}:scan|" ${GLOBALYZER_HOME}/config/sonar-project.properties
+sed -i "s|^sonar.projectName=.*$|sonar.projectName=$PROJECT_NAME|" ${GLOBALYZER_HOME}/config/sonar-project.properties
+sed -i "s|^sonar.sources=.*$|sonar.sources=$PROJECT_SOURCE_PATH|" ${GLOBALYZER_HOME}/config/sonar-project.properties
+sed -i "s|^sonar.lingoport.project.root=.*$|sonar.lingoport.project.root=$PROJECT_SOURCE_PATH|" ${GLOBALYZER_HOME}/config/sonar-project.properties
+
+
+echo ""
+echo "=================================================="
+echo "=========Install Globalyzer Dashboard============"
+echo "=================================================="
+echo ""
+
+java -jar ${GLOBALYZER_HOME}/lingoport/Lingoport_Dashboard_Client-5.6.5_2-Installer.jar ${GLOBALYZER_HOME}/lingoport/auto-install.xml
+chmod +x ${GLOBALYZER_HOME}/lingoport/globalyzer-lite-6.1.0_34.0/install-lite.sh
+
+echo ""
+echo "=================================================="
+echo "=========Install Globalyzer Lite=================="
+echo "=================================================="
+echo ""
+bash ${GLOBALYZER_HOME}/lingoport/globalyzer-lite-6.1.0_34.0/install-lite.sh
+
+echo ""
+echo "=================================================="
+echo "================Creating Scans==================="
+echo "=================================================="
+echo ""
+java -jar ${GLOBALYZER_HOME}/lingoport/globalyzer-lite-6.1.0_34.0/globalyzer-lite.jar $LITE_DEFINITION_FILE_PATH
+
+echo ""
+echo "=================================================="
+echo "================Update Dashboard=================="
+echo "=================================================="
+echo ""
+cp ${GLOBALYZER_HOME}/config/sonar-project.properties $PROJECT_SOURCE_PATH
+cd ${PROJECT_SOURCE_PATH}
+${DASHBOARD_INSTALL_PATH}/sonar-scanner-2.8/bin/sonar-scanner
+
+exit 0

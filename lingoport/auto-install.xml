@@ -7,7 +7,7 @@
 <installpath></installpath>
 </com.izforge.izpack.panels.target.TargetPanel>
 <com.izforge.izpack.panels.userinput.UserInputPanel id="sonar.settings">
-<entry key="dashboardURL" value=""/>
+<entry key="dashboardURL" value="YOUR_URL"/>
 </com.izforge.izpack.panels.userinput.UserInputPanel>
 <com.izforge.izpack.panels.userinput.UserInputPanel id="globalyzer.selection">
 <entry key="globalyzer.sets" value="false"/>
