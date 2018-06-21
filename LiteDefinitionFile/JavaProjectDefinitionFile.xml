@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+  <!-- All items should be allowed anywhere in the xml as long as the hierarchy is preserved -->
+  <gzproject>
+    <login>
+       <username></username> <!-- Please leave this empty   -->
+       <password></password><!--Please leave this empty -->
+       <server></server>
+       <use-local-rulesets></use-local-rulesets>  <!-- optional. May be 'true' or 'false'     -->
+                                                  <!-- if true, you need a Globalyzer.license -->
+       <!-- Optional Parameters -->
+       <optional>
+           <proxy-user></proxy-user>
+           <proxy-password></proxy-password>
+           <proxy-host></proxy-host>
+           <proxy-port></proxy-port>
+       </optional>
+    </login>
+    <project-path></project-path> <!--Please leave this empty -->
+    <project-name></project-name> <!--May fill in at runtime -->
+    <report-path></report-path>   <!--Please leave this empty -->
+    <report-type>ScanDetailedXML</report-type>
+    <scans>
+        <scan>
+          <!-- create and execute a single scan with this info -->
+          <scan-name>ACME_Java</scan-name>
+          <ruleset-name>ACME Java Rule Set</ruleset-name>
+          <ruleset-owner>employee.email@acme.com</ruleset-owner>
+          <!-- perform this scan on all files -->
+        </scan>
+
+        <scan>
+          <!-- create and execute a single scan with this info -->
+          <scan-name>ACME Javascript</scan-name>
+          <ruleset-name>ACME Javascript Rule Set</ruleset-name>
+          <ruleset-owner>employeer.email@acme.com</ruleset-owner>
+          <!-- optional -->
+          <!-- perform this scan on only the follow files and directories -->
+          <scan-items>
+            <item>src/main/webapp/js</item>
+            <item>src/main/webapp/static/js</item>
+          </scan-items>
+        </scan>
+
+        <scan>
+          <!-- create and execute a single scan with this info -->
+          <scan-name>Java Basic</scan-name>
+          <ruleset-name>Java Ruleset</ruleset-name>
+          <ruleset-owner>masnes@lingoport.com</ruleset-owner>
+          <scan-items>
+            <item>src/main/java</item>
+          </scan-items>
+          <!-- New fields. All new fields are optional -->
+          <comments>
+            <todo>SPECIAL_COMMENT</todo>
+            <ignore-next-line>IGNORELINE</ignore-next-line>
+            <start-ignore>STARTIGNORE</start-ignore>
+            <end-ignore>ENDIGNORE</end-ignore>
+          </comments>
+          <encoding>UTF-8</encoding>
+          <checks>
+            <embedded-strings>false</embedded-strings>
+            <static-file-references>true</static-file-references>
+
+            <!-- The following default to false because at least one issue is set to 'true' -->
+
+            <!-- <general-patterns></general-patterns>  -->
+            <!-- <locale-sensitive-methods></locale-sensitive-methods>  (Defaults to false)-->
+          </checks>
+        </scan>
+      </scans>
+ </gzproject>

@@ -2,8 +2,8 @@
   <!-- All items should be allowed anywhere in the xml as long as the hierarchy is preserved -->
   <gzproject>
     <login>
-       <username></username>
-       <password></password>
+       <username></username> <!-- Please leave this empty   -->
+       <password></password><!--Please leave this empty -->
        <server></server>
        <use-local-rulesets></use-local-rulesets>  <!-- optional. May be 'true' or 'false'     -->
                                                   <!-- if true, you need a Globalyzer.license -->
@@ -15,22 +15,28 @@
            <proxy-port></proxy-port>
        </optional>
     </login>
-    <project-path></project-path> <!-- May instead be specified from command line -->
-    <project-name></project-name>
-    <report-path></report-path>   <!-- May instead be specified from command line -->
-    <report-type></report-type>
+    <project-path></project-path> <!--Please leave this empty -->
+    <project-name></project-name> <!--May fill in at runtime -->
+    <report-path></report-path>   <!--Please leave this empty -->
+    <report-type>ScanDetailedXML</report-type>
     <scans>
        <scan>
           <!-- create and execute a single scan with this info -->
-          <scan-name></scan-name>
-          <ruleset-name></ruleset-name>
-          <ruleset-owner></ruleset-owner>
+          <scan-name>javascriptScan</scan-name>
+          <ruleset-name>javascriptRuleset</ruleset-name>
+          <ruleset-owner>example@company.com</ruleset-owner>
+          <checks>
+              <embedded-strings>true</embedded-strings>
+              <locale-sensitive-methods>true</locale-sensitive-methods>
+              <general-patterns>true</general-patterns>
+              <static-file-references>true</static-file-references>
+          </checks>
        </scan>
        <scan>
        <!-- create and execute a single scan with this info -->
-          <scan-name></scan-name>
-          <ruleset-name></ruleset-name>
-          <ruleset-owner></ruleset-owner>
+          <scan-name>HTMLScan</scan-name>
+          <ruleset-name>HTMLRuleset</ruleset-name>
+          <ruleset-owner>example@company.com</ruleset-owner>
           <!-- optional: specify files/directories to scan -->
           <scan-items>
              <item></item>

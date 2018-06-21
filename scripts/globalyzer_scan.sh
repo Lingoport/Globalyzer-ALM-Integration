@@ -91,11 +91,10 @@ fi
 # Locate Globalzer.license
 LICENSE_PATH="${GLOBALYZER_HOME}/lingoport/Globalzer.license"
 
-if [ -f $JENKINS_CLI_PATH ] ; then
+if [ -f $LICENSE_PATH ] ; then
   echo " Globalzer.license exists"
 else
   echo " Globalzer.license could not be located. Download Globalzer.license file from Globalyzer server, and copy the license file to lingoport directory."
-  exit 1
 fi
 
 sed -i "s|<installpath></installpath>|<installpath>$DASHBOARD_INSTALL_PATH</installpath>|" ${GLOBALYZER_HOME}/lingoport/auto-install.xml

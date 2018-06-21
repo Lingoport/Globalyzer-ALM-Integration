@@ -1,10 +1,16 @@
 # Globalyzer-ALM-Integration
 Lingoport, Inc. &copy; 2018
 
-Globalyzer-ALM-Integration is deployed Globalyzer as part of your ALM environment and make the adoption of Lingoport suite effortless for developers.
+Globalyzer-ALM-Integration is deployed Globalyzer as part of your ALM environment and make the adoption of Lingoport suite effortless for developers. It will create scan reports using your selected Lite definition file and update scan results to your Dashboard.
 
 ## Requirements
-1. Download Globalzer.license file from Globalyzer server, and copy the license file to lingoport directory.
+1. Clone this repository to your environment
+2. Modify/Add Lite definition file examples under LiteDefinitionFile directory.
+For full configuration instructions, checkout the [Lite Project Definition Files][wiki]
+[wiki]: https://globalyzer.lingoport.net/gzserver/help/referenceLite/project-definition-file-overview.html
+
+3. If you will use local rule sets, please download Globalzer.license file from Globalyzer server, and copy the license file to lingoport directory.
+4. Fill in all parameters in the config/lingoport_config.sh file.
 
 ## Configuration
 Configuration for Integration is intended to be as simple as possible. All that is needed for Globalyzer to be ready for use are a few environment variables, all of which should be set in the config file:
@@ -27,4 +33,4 @@ Configuration for Integration is intended to be as simple as possible. All that 
 The easiest way to install, verify, and run Globalyzer is by invoking the globalyzer_scan.sh script. This script can be found
 in the `scripts` directory.
 
-    ./scripts/globalyzer_scan.sh
+    bash scripts/globalyzer_scan.sh
