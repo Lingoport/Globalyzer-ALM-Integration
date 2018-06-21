@@ -7,7 +7,7 @@ Globalyzer-ALM-Integration is deployed Globalyzer as part of your ALM environmen
 1. Clone this repository to your environment
 2. Modify/Add Lite definition file examples under LiteDefinitionFile directory.
 
-For full configuration instructions, checkout the [Lite Project Definition Files][wiki]
+     For full configuration instructions, checkout the [Lite Project Definition Files][wiki]
 
 [wiki]: https://globalyzer.lingoport.net/gzserver/help/referenceLite/project-definition-file-overview.html
 
