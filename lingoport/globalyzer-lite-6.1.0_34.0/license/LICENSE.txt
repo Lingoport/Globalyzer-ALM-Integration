@@ -1,0 +1,39 @@
+NOTICE -- READ BEFORE INSTALLING SOFTWARE
+
+THIS DOCUMENT IS A LEGAL AGREEMENT BETWEEN LINGOPORT, INC. (LINGOPORT) AND YOU, THE LICENSEE. CAREFULLY READ THE TERMS AND CONDITIONS OF THIS AGREEMENT BEFORE ACCEPTING THESE CONDITIONS. INSTALLING THIS SOFTWARE INDICATES YOUR ACCEPTANCE OF ALL THE TERMS AND CONDITIONS. IF YOU DO NOT AGREE TO ALL THE TERMS AND CONDITIONS OF THIS AGREEMENT, IMMEDIATELY NOTIFY LINGOPORT OF YOUR NONACCEPTANCE.
+
+If GLOBALYZER LITE is being used as an evaluation trial and has not been purchased, the following TRIAL LICENSE conditions apply:
+
+THIS TRIAL LICENSE AGREEMENT, ("Trial Agreement") by and between LINGOPORT, ("Licensor") and the evaluating party ("User"), hereby grants to User a non-exclusive, nontransferable, royalty-free license to use the Software Product for 30 days, or a mutually agreed to period from date of delivery (the "Trial Period"), prior to purchase of a Globalyzer Lite license. The Software product will be used for purchase evaluation purposes only.
+
+If GLOBALYZER LITE has been purchased, the following LICENSE GRANT conditions apply:
+
+LICENSE GRANT - LINGOPORT grants to you one or more of the following non-exclusive licenses as purchased by you and indicated by your invoice from LINGOPORT:
+
+GRANT OF NETWORK LICENSE. If the License is for installation and network use at the User's company or organization, LINGOPORT grants you the right to use the Software on a computer network as follows: You may have as many copies of the Software in simultaneous use on the network as is specifically authorized by the license fees paid and user-account and/or product-based assignments. 
+
+US GOVERNMENT RESTRICTED RIGHTS - The Software and Documentation are provided with Restricted Rights. Use, duplication, or disclosure by the United States Government is subject to restrictions as set forth in subparagraphs (c)(1)(ii) of The Rights in Technical Data and Computer Software clause at DFARS 252.227-7013 or subparagraphs (c)(I) and (2) of the Commercial Computer Software -- Restricted Rights at 48 CFR 52.227-19 as applicable. Manufacturer is Lingoport, Inc., 3985 Wonderland Hill Avenue, Boulder, Colorado, 80304, USA.
+
+OWNERSHIP, PROPRIETARY AND COPYRIGHT NOTICES, COPYING, MODIFICATION, AND USE - LINGOPORT owns and markets the Software and Documentation and would be harmed by its unauthorized use. The Software and Documentation is protected by United States copyright laws and international treaty provisions. You must treat the Software and Documentation as copyrighted material and cannot copy it for others to use. You may make one copy of the Software solely for backup or archival purposes.
+
+You may modify the Software or combine it with other software subject to the requirement that the derived software is subject to the terms of this Agreement. You may not, however, reverse engineer, decompile or disassemble the Software.
+
+You may reproduce written materials provided in this package (the Documentation), but only for your use of the enclosed Software in accordance with the License Grant described above. All such copies must contain the proprietary and copyright notices of the original Documentation. In no case may any copy be distributed to outside parties.
+
+DUAL MEDIA - You may receive the Software in more than one media. You may not use the media on any other computer or computer network, or loan, rent, lease, or transfer the Software to another user except as part of a permanent transfer (as provided in the Transfer section of this agreement).
+
+TRANSFER - You may transfer the Software, Documentation and this license as a package to another party, but only after all of the following conditions have been met: (a) written notification to LINGOPORT, (b) agreement by the transferee be bound by the terms and conditions of this Agreement, and (c) acceptance by LINGOPORT. In the event of transfer of the Software, Documentation, and this license as a package, you will destroy all copies of the Software, whether in printed, machine readable, or other form, not delivered to the transferee.
+
+EXPORT RESTRICTIONS - Except as specifically authorized by the United States Export Administration Regulations, or by prior written approval of the United States Department of Commerce, Licensee will not re-export, resell, or otherwise dispose of any of the Software or Documentation: (1) to any country not approved for export as brought to Licensee's attention by means of a bill of lading, commercial invoice, or any other means; or (2) to any person if there is reason to believe that it will result directly or indirectly in disposition of the Software or Documentation contrary to the representations made herein or contrary to United States Export Administration Regulations.
+
+WARRANTY - LINGOPORT warrants that, for a period of thirty days from the date of purchase, the Software shall perform in substantial conformity with the Documentation. If Licensee reports a significant program error that LINGOPORT is unable to fix after conforming the existence thereof, LINGOPORT will refund the license fee provided Licensee returns the Software and Documentation and all copies thereof and agrees to cease further use of the Software.
+
+DISCLAIMER, AND LIMITATIONS of WARRANTY AND LIABILITY - The foregoing express warranties are given in lieu of all other warranties, whether written, oral or implied (including any warranty of merchantability or of fitness for a particular purpose), such other warranties being hereby disclaimed. LINGOPORT does not warrant that the functions contained in the Software will meet Licensee's requirements or will operate in the combinations which may be selected for use by Licensee, or that operation of the software will be uninterrupted or error-free, or that the data stored in the software will not be lost if, for any reason, operation of the Software is interrupted. Refund of the license fee shall constitute the sole remedy of Licensee of the sole liability of LINGOPORT for breach of warranty or other injury of license resulting from use of the Software. In no event shall LINGOPORT's liability include any special, incidental or consequential damages, even if LINGOPORT has been advised of the possibility of such potential loss or damage.
+
+DEFAULT - You will be in default hereunder if you breach any provision of this Agreement relating to use or copying of the Software or Documentation, in which case the license granted hereunder shall terminate immediately. You will be in default hereunder if you commit a material breach of any other term of this Agreement which is not remedied within ten days after notice of such violation has been given by LINGOPORT. In the event of termination you will discontinue use of the Software and Documentation, destroy or return to LINGOPORT all copies of the Software and Documentation, and certify in writing to LINGOPORT that such copies have been destroyed or returned. In the event you are in default hereunder, all remedies at law and in equity shall be available to LINGOPORT. In the event of any suit or claim arising from such default, the prevailing party shall be entitled to its costs and reasonable attorneys fees.
+
+GOVERNING LAW - This agreement is governed by the laws of the State of Colorado.
+
+ACCEPTANCE - By using Globalyzer Lite the User agrees to all terms in this agreement
+
+APPENDIX A - There are several open source components used in Globalyzer Lite. Their licensing texts are described and linked to in the component-licenses.html file.
