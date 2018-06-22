@@ -88,13 +88,13 @@ else
   exit 1
 fi
 
-# Locate Globalzer.license
-LICENSE_PATH="${GLOBALYZER_HOME}/lingoport/Globalzer.license"
+# Locate Globalyzer.license
+LICENSE_PATH="${GLOBALYZER_HOME}/lingoport/Globalyzer.license"
 
 if [ -f $LICENSE_PATH ] ; then
-  echo " Globalzer.license exists"
+  echo " Globalyzer.license exists"
 else
-  echo " Globalzer.license could not be located. Download Globalzer.license file from Globalyzer server, and copy the license file to lingoport directory."
+  echo " Globalyzer.license could not be located. Download Globalyzer.license file from Globalyzer server, and copy the license file to lingoport directory."
 fi
 
 sed -i "s|<installpath></installpath>|<installpath>$DASHBOARD_INSTALL_PATH</installpath>|" ${GLOBALYZER_HOME}/lingoport/auto-install.xml

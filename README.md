@@ -5,13 +5,13 @@ Globalyzer-ALM-Integration is deployed Globalyzer as part of your ALM environmen
 
 ## Requirements
 1. Clone this repository to your environment
-2. Modify/Add Lite definition file examples under LiteDefinitionFile directory.
+2. Download Globalyzer.license file from Globalyzer server, and copy the license file to lingoport directory in your repository.
+3. Modify/Add Lite definition file examples under LiteDefinitionFile directory.
 
      For full configuration instructions, checkout the [Lite Project Definition Files][wiki]
 
 [wiki]: https://globalyzer.lingoport.net/gzserver/help/referenceLite/project-definition-file-overview.html
 
-3. If you will use local rule sets, please download Globalzer.license file from Globalyzer server, and copy the license file to lingoport directory.
 4. Fill in all parameters in the config/lingoport_config.sh file.
 
 ## Configuration
