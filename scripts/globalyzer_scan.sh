@@ -120,21 +120,21 @@ echo "=================================================="
 echo ""
 
 java -jar ${GLOBALYZER_HOME}/lingoport/Lingoport_Dashboard_Client-5.6.5_2-Installer.jar ${GLOBALYZER_HOME}/lingoport/auto-install.xml
-chmod +x ${GLOBALYZER_HOME}/lingoport/globalyzer-lite-6.1.0_34.0/install-lite.sh
+chmod +x ${GLOBALYZER_HOME}/lingoport/globalyzer-lite-6.1.1_11.0/install-lite.sh
 
 echo ""
 echo "=================================================="
 echo "=========Install Globalyzer Lite=================="
 echo "=================================================="
 echo ""
-bash ${GLOBALYZER_HOME}/lingoport/globalyzer-lite-6.1.0_34.0/install-lite.sh
+bash ${GLOBALYZER_HOME}/lingoport/globalyzer-lite-6.1.1_11.0/install-lite.sh
 
 echo ""
 echo "=================================================="
 echo "================Creating Scans==================="
 echo "=================================================="
 echo ""
-java -jar ${GLOBALYZER_HOME}/lingoport/globalyzer-lite-6.1.0_34.0/globalyzer-lite.jar $LITE_DEFINITION_FILE_PATH
+java -jar ${GLOBALYZER_HOME}/lingoport/globalyzer-lite-6.1.1_11.0/globalyzer-lite.jar $LITE_DEFINITION_FILE_PATH
 
 echo ""
 echo "=================================================="
