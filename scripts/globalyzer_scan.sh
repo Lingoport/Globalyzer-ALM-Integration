@@ -119,22 +119,22 @@ echo "=========Install Globalyzer Dashboard============"
 echo "=================================================="
 echo ""
 
-java -jar ${GLOBALYZER_HOME}/lingoport/Lingoport_Dashboard_Client-5.6.6-Installer.jar ${GLOBALYZER_HOME}/lingoport/auto-install.xml
-chmod +x ${GLOBALYZER_HOME}/lingoport/globalyzer-lite-6.1.1_11.0/install-lite.sh
+java -jar ${GLOBALYZER_HOME}/lingoport/Lingoport_Dashboard_Client-5.6.7-Installer.jar ${GLOBALYZER_HOME}/lingoport/auto-install.xml
+chmod +x ${GLOBALYZER_HOME}/lingoport/globalyzer-lite-6.2.0_18.0/install-lite.sh
 
 echo ""
 echo "=================================================="
 echo "=========Install Globalyzer Lite=================="
 echo "=================================================="
 echo ""
-bash ${GLOBALYZER_HOME}/lingoport/globalyzer-lite-6.1.1_11.0/install-lite.sh
+bash ${GLOBALYZER_HOME}/lingoport/globalyzer-lite-6.2.0_18.0/install-lite.sh
 
 echo ""
 echo "=================================================="
 echo "================Creating Scans==================="
 echo "=================================================="
 echo ""
-java -jar ${GLOBALYZER_HOME}/lingoport/globalyzer-lite-6.1.1_11.0/globalyzer-lite.jar $LITE_DEFINITION_FILE_PATH
+java -jar ${GLOBALYZER_HOME}/lingoport/globalyzer-lite-6.2.0_18.0/globalyzer-lite.jar $LITE_DEFINITION_FILE_PATH
 
 echo ""
 echo "=================================================="
