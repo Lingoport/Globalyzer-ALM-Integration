@@ -119,7 +119,7 @@ echo "=========Install Globalyzer Dashboard============"
 echo "=================================================="
 echo ""
 
-java -jar ${GLOBALYZER_HOME}/lingoport/Lingoport_Dashboard_Client-5.6.7-Installer.jar ${GLOBALYZER_HOME}/lingoport/auto-install.xml
+java -jar ${GLOBALYZER_HOME}/lingoport/Lingoport_Dashboard_Client-5.6.8-Installer.jar ${GLOBALYZER_HOME}/lingoport/auto-install.xml
 chmod +x ${GLOBALYZER_HOME}/lingoport/globalyzer-lite-6.2.0_18.0/install-lite.sh
 
 echo ""
