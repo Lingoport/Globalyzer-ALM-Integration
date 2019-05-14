@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+<session-factory>
+		<!-- HsqlDb connection -->
+      <property name="dialect">org.hibernate.dialect.HSQLDialect</property>
+	  <property name="hibernate.connection.driver_class">org.hsqldb.jdbcDriver</property>
+      <property name="hibernate.connection.url">jdbc:hsqldb:mem:tempdb</property>
+      <property name="hibernate.connection.username">sa</property>   
+      <property name="hibernate.connection.password">1</property>   
+	
+		<!-- Hibernate options -->
+      <property name="hibernate.show_sql">false</property>
+      <property name="hibernate.format_sql">true</property>
+      <property name="hibernate.use_sql_comments">true</property>
+      <property name="hibernate.hbm2ddl.auto">create</property>
+	  	
+	  <!-- Disable Secondary Cache -->
+	 <property name="hibernate.cache.use_query_cache">false</property>
+	 <property name="hibernate.cache.use_second_level_cache">false</property>
+      <!-- Mapping files -->
+	  <mapping resource="com/lingoport/database/hibernate/pojos/Configuration.hbm.xml"/>
+	  <mapping resource="com/lingoport/database/hibernate/pojos/FIConfiguration.hbm.xml"/>
+      <mapping resource="com/lingoport/database/hibernate/pojos/ProjectSummary.hbm.xml"/>
+<!-- Project related mappings are added dynamically to support both single Db and multipe Db mode -->
+</session-factory>
+</hibernate-configuration>
+ 
