@@ -119,22 +119,22 @@ echo "=========Install Globalyzer Dashboard============"
 echo "=================================================="
 echo ""
 
-java -jar ${GLOBALYZER_HOME}/lingoport/Lingoport_Dashboard_Client-5.6.8-Installer.jar ${GLOBALYZER_HOME}/lingoport/auto-install.xml
-chmod +x ${GLOBALYZER_HOME}/lingoport/globalyzer-lite-6.3.1_2.0/install-lite.sh
+java -jar ${GLOBALYZER_HOME}/lingoport/Lingoport_Dashboard_Client-7.8.1-Installer.jar ${GLOBALYZER_HOME}/lingoport/auto-install.xml
+chmod +x ${GLOBALYZER_HOME}/lingoport/globalyzer-lite-6.4.0_9.0/install-lite.sh
 
 echo ""
 echo "=================================================="
 echo "=========Install Globalyzer Lite=================="
 echo "=================================================="
 echo ""
-bash ${GLOBALYZER_HOME}/lingoport/globalyzer-lite-6.3.1_2.0/install-lite.sh
+bash ${GLOBALYZER_HOME}/lingoport/globalyzer-lite-6.4.0_9.0/install-lite.sh
 
 echo ""
 echo "=================================================="
 echo "================Creating Scans==================="
 echo "=================================================="
 echo ""
-java -jar ${GLOBALYZER_HOME}/lingoport/globalyzer-lite-6.3.1_2.0/globalyzer-lite.jar $LITE_DEFINITION_FILE_PATH
+java -jar ${GLOBALYZER_HOME}/lingoport/globalyzer-lite-6.4.0_9.0/globalyzer-lite.jar $LITE_DEFINITION_FILE_PATH
 
 echo ""
 echo "=================================================="
@@ -143,6 +143,6 @@ echo "=================================================="
 echo ""
 cp ${GLOBALYZER_HOME}/config/sonar-project.properties $PROJECT_SOURCE_PATH
 cd ${PROJECT_SOURCE_PATH}
-${DASHBOARD_INSTALL_PATH}/sonar-scanner-2.8/bin/sonar-scanner
+${DASHBOARD_INSTALL_PATH}/sonar-scanner-4.0/bin/sonar-scanner
 
 exit 0
