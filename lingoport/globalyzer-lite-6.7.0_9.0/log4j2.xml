@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ALL < TRACE < DEBUG < INFO < WARN < ERROR < FATAL -->
+
+<Configuration status="WARN">
+
+    <Properties>
+		<Property name="LOG_DIR">${user.home}/.globalyzer/log</Property>
+		<Property name="LOG_PATTERN">%d{yyyy-MM-dd HH:mm:ss} [%t] %-5p %c - %m%n</Property>
+		<Property name="CONSOLE_PATTERN">%d{yyyy-MM-dd HH:mm:ss} [%t] %-5p %C{3} %l  - %m%n</Property>
+	</Properties>
+
+    <Appenders>
+    
+        <Console name="Console" target="SYSTEM_OUT" follow="true">
+            <PatternLayout pattern="${CONSOLE_PATTERN}"/>
+            <LevelRangeFilter minLevel="FATAL" maxLevel="FATAL" onMatch="ACCEPT" onMismatch="DENY"/>
+        </Console>
+    
+        <RollingFile name="Globalyzer"
+        
+            fileName="${LOG_DIR}/globalyzer.log"
+            filePattern="${LOG_DIR}/globalyzer-%d{yyyy-MM-dd}-%i.log">
+            
+            <PatternLayout pattern="${LOG_PATTERN}" />
+           
+            <Policies>
+				<SizeBasedTriggeringPolicy size="10MB" />
+			</Policies>
+			<DefaultRolloverStrategy max="5" />
+				
+        </RollingFile>
+        
+    </Appenders>
+    
+    <Loggers>
+        <Root level="INFO">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="Globalyzer"  />
+        </Root>
+        <Logger name="com.lingoport" additivity="false" level="info">
+            <AppenderRef ref="Console" />
+            <AppenderRef ref="Globalyzer"  />
+        </Logger>
+        <Logger name="org.hibernate" additivity="false" level="warn">
+            <AppenderRef ref="Console" />
+            <AppenderRef ref="Globalyzer"  />
+        </Logger>
+		<Logger name="org.hibernate.orm.connections.pooling" additivity="false" level="error">
+            <AppenderRef ref="Console" />
+            <AppenderRef ref="Globalyzer"  />
+        </Logger>
+    </Loggers>
+    
+</Configuration>
+
+
+
+
+
+
+
+
+
+  
